@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import './AddTodo.css';
 
 export default function AddTodo({ onAdd }) {
   const [text, setText] = useState('');
   const handleChange = (e) => setText(e.target.value);
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(text.trim().length === 0) {
-        return;
+    if (text.trim().length === 0) {
+      return;
     }
-    onAdd({ id: 'certain', text, status: 'active' });
+    onAdd({ id: uuidv4(), text, status: 'active' });
     setText('');
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='form' onSubmit={handleSubmit}>
       <input
+      className='input'
         type='text'
         value={text}
         placeholder='Add Todo'
         onChange={handleChange}
       />
-      <button>Add</button>
+      <button className='button'>Add</button>
     </form>
   );
 }

@@ -30,16 +30,6 @@
   filter: blur(80px);
 }
 
-.oval1 {
-  top: -18%;
-  right: 0;
-}
-
-.oval2 {
-  top: 36%;
-  left: -8rem;
-}
-
 .button {
   display: flex;
   align-items: center;
@@ -58,6 +48,6 @@
   border: 2px solid var(--purple);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
