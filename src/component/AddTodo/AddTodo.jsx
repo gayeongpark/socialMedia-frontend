@@ -15,6 +15,7 @@ export default function AddTodo({ onAdd }) {
   };
   return (
     <form className='form' onSubmit={handleSubmit}>
+      <div className='Add'>
       <input
       className='input'
         type='text'
@@ -23,6 +24,7 @@ export default function AddTodo({ onAdd }) {
         onChange={handleChange}
       />
       <button className='button'>Add</button>
+      </div>
     </form>
   );
 }

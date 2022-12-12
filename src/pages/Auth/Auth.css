@@ -53,6 +53,7 @@
   border-radius: 8px;
   padding: 20px;
   flex: 1;
+  font-size: 15x;
 }
 
 .infoForm > div {
@@ -76,5 +77,5 @@
 .authForm > div {
   width: 100%;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }

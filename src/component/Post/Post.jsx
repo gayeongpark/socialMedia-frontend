@@ -13,10 +13,10 @@ export default function Post({ data }) {
         <FaRegCommentDots/>
         <BiShareAlt/>
       </div>
-      <span>{data.likes}likes</span>
+      <span>{data.likes} likes</span>
       <div className='detail'>
-        <span><b>{data.name}</b></span>
-        <span>{data.desc}</span>
+        <div><b>{data.name}</b></div>
+        <div className='margin'>{data.desc}</div>
       </div>
     </div>
   );

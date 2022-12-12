@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import ProfileImage from '../../image/profile.jpg';
+import ShareModal from '../ShareModal/ShareModal';
 import './PostShare.css';
 import {
   HiPhotograph,
@@ -10,6 +11,7 @@ import {
 import { FaTimes } from 'react-icons/fa';
 
 export default function PostShare() {
+  const [modalOpened, setModalOpened] = useState(false);
   const [image, setImage] = useState(null);
   const imageRef = useRef();
 
@@ -28,25 +30,37 @@ export default function PostShare() {
         <input type='text' placeholder="What's on your mind?" />
         <div className='PostOptions'>
           <div
-            className='option photo'
+            className='option'
             onClick={() => imageRef.current.click()}
           >
-            <HiPhotograph />
+            <HiPhotograph className='photo'/>
             Photo
           </div>
-          <div className='option video'>
-            <HiVideoCamera />
+          <div
+            className='option'
+            onClick={() => imageRef.current.click()}
+          >
+            <HiVideoCamera className='video'/>
             Video
           </div>
-          <div className='option location'>
-            <HiLocationMarker />
+          <div className='option'>
+            <HiLocationMarker className='location'/>
             Location
           </div>
-          <div className='option schedule'>
-            <HiCalendar />
+          <div className='option'>
+            <HiCalendar className='schedule'/>
             Schedule
           </div>
-          <button className='button ps-button'>Share</button>
+          <button
+            className='button ps-button'
+            onClick={() => setModalOpened(true)}
+          >
+            Share
+          </button>
+          <ShareModal
+            modalOpened={modalOpened}
+            setModalOpened={setModalOpened}
+          />
           <div>
             <input
               className='upload'
@@ -59,7 +73,7 @@ export default function PostShare() {
         </div>
         {image && (
           <div className='previewImage'>
-            <FaTimes onClick={() => setImage(null)}/>
+            <FaTimes onClick={() => setImage(null)} />
             <img src={image.image} alt='previewImage' />
           </div>
         )}

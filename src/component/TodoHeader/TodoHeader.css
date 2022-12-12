@@ -23,12 +23,18 @@ ul {
   text-transform: capitalize;
   background-color: transparent;
   color: var(--purple);
-  opacity: 0.8;
+  opacity: 0.5;
   font-weight: bold;
   outline: none;
   border: none;
 }
 
 .filter:hover {
+  color: var(--purple);
+  opacity: 1;
+}
+
+.filter:focus {
+  color: var(--purple);
   opacity: 1;
 }

@@ -1,9 +1,9 @@
 .TodoCard {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
     background-color: var(--cardColor);
     padding: 1rem;
     border-radius: 1rem;
-    padding-left: 2rem;
 }

@@ -1,24 +1,32 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .form {
   width: 100%;
   display: flex;
-  /* padding: 1.4rem 1rem; */
+}
+
+.Add {
+  display: flex;
+  background-color: var(--inputColor);
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .input {
-    font-size: 17px;
-    padding: 10px;
-    border: none;
-    outline: none;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
 }
 
 .button {
-    cursor: pointer;
-    background-color: var(--buttonBg);
-    font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--buttonBg);
+  font-size: 20px;
 }
-
