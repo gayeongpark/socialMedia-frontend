@@ -1,7 +1,7 @@
 import { Modal, useMantineTheme } from '@mantine/core';
 import React from 'react';
 import PostShare from '../PostShare/PostShare';
-import './ShareModal.css'
+import './ShareModal.css';
 
 export default function ShareModal({ modalOpened, setModalOpened }) {
   const theme = useMantineTheme();
@@ -17,11 +17,10 @@ export default function ShareModal({ modalOpened, setModalOpened }) {
       overlayBlur={3}
       size='60%'
       title={<h1>Share your todos with your friends</h1>}
-    
       opened={modalOpened}
       onClose={() => setModalOpened(false)}
     >
-      <PostShare/>
+      <PostShare />
     </Modal>
   );
 }

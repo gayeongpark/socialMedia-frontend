@@ -21,9 +21,18 @@
 }
 
 .detail {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
-.margin{
-    margin-top: 10px;
+.margin {
+  margin-top: 10px;
+}
+
+.delete {
+  display: flex;
+  flex-direction: flex-end;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  margin-left: 95%;
 }
